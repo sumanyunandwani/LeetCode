@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+
+WORKDIR /home/sumanyu/app
+
+RUN apt update
+RUN apt -y install python3 python3-pip
+RUN pip3 install flask
+
+COPY test.py  /home/sumanyu/app/
+
+CMD python3 test.py
